@@ -7,48 +7,70 @@
 <style>
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC",sans-serif;
-  background:#f5f5f7;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC",sans-serif;
+  background:#f7f7fb;
   color:#1c1c1e;
 }
 
-/* 顶部 */
+/* 顶部留白（韩系关键） */
 .header{
   text-align:center;
-  padding:50px 20px 10px;
+  padding:70px 20px 20px;
 }
 
+/* SVG Logo */
 .logo{
-  font-size:46px;
+  width:64px;
+  height:64px;
+  margin:0 auto 10px;
 }
 
+/* 标题 */
 .title{
-  font-size:24px;
+  font-size:26px;
   font-weight:600;
+  letter-spacing:0.5px;
 }
 
+/* 副标题 */
 .sub{
   font-size:13px;
-  color:#8e8e93;
+  color:#9aa0a6;
   margin-top:6px;
 }
 
-/* 简介 */
+/* 极简说明 */
 .desc{
-  padding:0 20px;
+  padding:0 28px;
   font-size:13px;
-  color:#8e8e93;
-  line-height:1.6;
+  color:#9aa0a6;
+  line-height:1.8;
   text-align:center;
-  margin-top:10px;
+  margin-top:14px;
 }
 
-/* 主按钮 */
+/* 卡片（更轻） */
+.card{
+  background:#ffffff;
+  margin:14px 22px;
+  padding:18px;
+  border-radius:18px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.04);
+}
+
+/* 套餐价格 */
+.price{
+  font-size:13px;
+  color:#9aa0a6;
+  margin-top:4px;
+}
+
+/* 主按钮（极简黑） */
 .primary-btn{
-  margin:20px;
+  margin:22px;
   padding:14px;
-  border-radius:14px;
-  background:#1c1c1e;
+  border-radius:16px;
+  background:#111;
   color:white;
   text-align:center;
   font-weight:600;
@@ -56,61 +78,65 @@ body{
 
 /* 次按钮 */
 .secondary-btn{
-  margin:10px 20px;
+  margin:10px 22px;
   padding:14px;
-  border-radius:14px;
+  border-radius:16px;
   background:#fff;
-  border:1px solid #e5e5ea;
+  border:1px solid #ececf1;
   text-align:center;
-  color:#1c1c1e;
+  color:#111;
   font-weight:500;
 }
 
-/* 卡片 */
-.card{
-  background:#fff;
-  margin:12px 20px;
-  padding:16px;
-  border-radius:16px;
-  box-shadow:0 4px 18px rgba(0,0,0,0.06);
+/* 复制按钮 */
+.copy-btn{
+  margin-top:10px;
+  font-size:12px;
+  color:#6b7280;
+  cursor:pointer;
 }
 
-/* 价格 */
-.price{
-  font-size:13px;
-  color:#8e8e93;
-  margin-top:4px;
-}
-
-/* 二维码图片 */
-.qr{
-  width:150px;
-  height:150px;
-  margin:12px auto;
-  display:block;
-  border-radius:14px;
-  border:1px solid #e5e5ea;
+/* toast提示 */
+.toast{
+  position:fixed;
+  bottom:40px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#111;
+  color:white;
+  padding:10px 14px;
+  border-radius:10px;
+  font-size:12px;
+  display:none;
 }
 </style>
 </head>
 
 <body>
 
-<!-- 顶部 -->
+<!-- SVG Logo（品牌核心） -->
 <div class="header">
-  <div class="logo">🐰</div>
-  <div class="title">BunnyLink</div>
-  <div class="sub">轻量 · 高速 · 多设备支持</div>
+
+<svg class="logo" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="42" fill="#111"/>
+  <path d="M35 55c8-10 22-10 30 0" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="40" cy="42" r="3" fill="white"/>
+  <circle cx="60" cy="42" r="3" fill="white"/>
+</svg>
+
+<div class="title">BunnyLink</div>
+<div class="sub">Minimal · Stable · Fast</div>
+
 </div>
 
-<!-- 简介 -->
+<!-- 韩系留白说明 -->
 <div class="desc">
-  极简网络访问服务，即开即用，无复杂配置<br>
-  支持 iOS / Android / Windows / Mac
+极简网络访问服务<br>
+轻量结构 · 多设备支持 · 即开即用
 </div>
 
 <!-- 主入口 -->
-<a href="你的微店链接" target="_blank" style="text-decoration:none;">
+<a href="你的微店链接" style="text-decoration:none;">
   <div class="primary-btn">立即自助开通</div>
 </a>
 
@@ -135,45 +161,48 @@ body{
   <div class="price">¥160 · 不限流量</div>
 </div>
 
-<!-- 人工开通 -->
+<!-- 联系 -->
 <div class="secondary-btn" onclick="openContact()">
-  人工开通 / 联系方式
+人工开通 / 联系方式
 </div>
 
-<!-- 人工开通弹窗 -->
-<div class="modal" id="contact" style="
+<!-- 联系面板 -->
+<div id="contact" style="
 display:none;
 position:fixed;
 bottom:0;
 left:0;
 right:0;
 background:#fff;
-border-top-left-radius:20px;
-border-top-right-radius:20px;
-padding:20px;
-box-shadow:0 -10px 30px rgba(0,0,0,0.15);
+border-top-left-radius:22px;
+border-top-right-radius:22px;
+padding:22px;
+box-shadow:0 -10px 30px rgba(0,0,0,0.12);
 ">
 
-  <h3 style="margin-top:0;">人工开通</h3>
+<div style="font-size:16px;font-weight:600;">人工开通</div>
 
-  <div style="font-size:13px;color:#8e8e93;line-height:1.8;">
-    微信：BunnyLink<br>
-    QQ群：772320523
-  </div>
-
-  <!-- 微信二维码 -->
-  <img class="qr"
-       src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=BunnyLink">
-
-  <!-- QQ群二维码 -->
-  <img class="qr"
-       src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=772320523">
-
-  <div style="text-align:center;color:#007aff;margin-top:10px;font-size:14px;"
-       onclick="closeContact()">
-    关闭
-  </div>
+<!-- 微信 -->
+<div style="margin-top:16px;">
+  <div style="font-size:13px;">微信：BunnyLink</div>
+  <div class="copy-btn" onclick="copyText('BunnyLink')">一键复制微信</div>
 </div>
+
+<!-- QQ群 -->
+<div style="margin-top:16px;">
+  <div style="font-size:13px;">QQ群：772320523</div>
+  <div class="copy-btn" onclick="copyText('772320523')">一键复制QQ群</div>
+</div>
+
+<div style="margin-top:20px;text-align:center;color:#3b82f6;font-size:14px;"
+onclick="closeContact()">
+关闭
+</div>
+
+</div>
+
+<!-- toast -->
+<div id="toast" class="toast">已复制</div>
 
 <script>
 function openContact(){
@@ -182,6 +211,20 @@ function openContact(){
 
 function closeContact(){
   document.getElementById('contact').style.display='none';
+}
+
+/* 一键复制 */
+function copyText(text){
+  navigator.clipboard.writeText(text);
+  showToast("已复制 " + text);
+}
+
+/* toast */
+function showToast(msg){
+  let t=document.getElementById('toast');
+  t.innerText=msg;
+  t.style.display='block';
+  setTimeout(()=>{t.style.display='none';},1500);
 }
 </script>
 
