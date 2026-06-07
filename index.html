@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BunnyLink - 选择入口</title>
+<title>BunnyLink</title>
 
 <style>
 body{
@@ -12,13 +12,21 @@ body{
   color:white;
 }
 
+/* 容器 */
 .container{
-  max-width:800px;
+  max-width:900px;
   margin:auto;
   padding:60px 20px;
   text-align:center;
 }
 
+/* logo */
+.logo{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+/* 标题 */
 .title{
   font-size:26px;
   font-weight:600;
@@ -30,40 +38,48 @@ body{
   margin-top:10px;
 }
 
+/* 特性 */
+.features{
+  margin-top:30px;
+  font-size:13px;
+  color:#b8c0cc;
+  line-height:1.8;
+}
+
+/* 套餐 */
 .cards{
   display:flex;
-  flex-direction:column;
-  gap:16px;
-  margin-top:40px;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin-top:30px;
 }
 
 .card{
   background:rgba(255,255,255,0.05);
   border:1px solid rgba(255,255,255,0.08);
-  padding:20px;
+  padding:14px;
   border-radius:14px;
+  width:160px;
   backdrop-filter: blur(10px);
 }
 
-.card h3{
-  margin:0;
+.price{
+  color:#6ea8ff;
   font-size:16px;
-}
-
-.card p{
-  font-size:12px;
-  color:#9aa4b2;
   margin-top:6px;
 }
 
+/* 按钮 */
 .btn{
-  display:inline-block;
-  margin-top:12px;
-  padding:12px 18px;
-  border-radius:10px;
+  display:block;
+  margin:10px auto;
+  padding:13px 18px;
+  border-radius:12px;
   text-decoration:none;
   font-size:13px;
   font-weight:600;
+  max-width:260px;
 }
 
 .primary{
@@ -75,6 +91,13 @@ body{
   border:1px solid #6ea8ff;
   color:#6ea8ff;
 }
+
+/* 底部 */
+.footer{
+  margin-top:40px;
+  font-size:11px;
+  color:#555;
+}
 </style>
 </head>
 
@@ -82,34 +105,60 @@ body{
 
 <div class="container">
 
-  <div class="title">选择入口</div>
-  <div class="sub">Select your access method</div>
+  <!-- LOGO -->
+  <div class="logo">🐰</div>
 
+  <div class="title">BunnyLink</div>
+
+  <div class="sub">轻量 · 高速 · 多设备支持 · 稳定连接体验</div>
+
+  <!-- 特性 -->
+  <div class="features">
+    极简设计 · 全球节点优化<br>
+    多设备支持（iOS / Android / Windows / Mac）<br>
+    低延迟 · 高稳定性 · 即开即用
+  </div>
+
+  <!-- 套餐 -->
   <div class="cards">
 
-    <!-- 微店 -->
     <div class="card">
-      <h3>在线购买</h3>
-      <p>推荐方式｜自助下单，立即开通服务</p>
-      <a class="btn primary" href="你的微店链接" target="_blank">
-        进入微店购买
-      </a>
+      月卡
+      <div class="price">¥20</div>
     </div>
 
-    <!-- 联系方式 -->
     <div class="card">
-      <h3>人工开通</h3>
-      <p>微信 / QQ 联系客服，人工处理订单</p>
-
-      <a class="btn secondary" href="你的微信二维码页面或图片链接">
-        微信联系
-      </a>
-
-      <a class="btn secondary" href="你的QQ链接">
-        QQ联系
-      </a>
+      季卡
+      <div class="price">¥40</div>
     </div>
 
+    <div class="card">
+      半年
+      <div class="price">¥80</div>
+    </div>
+
+    <div class="card">
+      年卡
+      <div class="price">¥160</div>
+    </div>
+
+  </div>
+
+  <!-- 入口按钮 -->
+  <div style="margin-top:30px;">
+
+    <a class="btn primary" href="你的微店链接" target="_blank">
+      立即购买 / Buy Now
+    </a>
+
+    <a class="btn secondary" href="contact.html">
+      联系方式 / Contact
+    </a>
+
+  </div>
+
+  <div class="footer">
+    BunnyLink © Stable Network Access System
   </div>
 
 </div>
