@@ -12,34 +12,31 @@ body{
   color:#1c1c1e;
 }
 
-/* 顶部留白（韩系关键） */
+/* 顶部 */
 .header{
   text-align:center;
-  padding:70px 20px 20px;
+  padding:60px 20px 10px;
 }
 
-/* ✅ 韩系兔子Logo */
+/* 🐰 更明显兔头 */
 .logo{
-  width:72px;
-  height:72px;
+  width:92px;
+  height:92px;
   margin:0 auto 10px;
 }
 
-/* 标题 */
 .title{
   font-size:26px;
   font-weight:600;
-  letter-spacing:0.5px;
 }
 
-/* 副标题 */
 .sub{
   font-size:13px;
   color:#9aa0a6;
   margin-top:6px;
 }
 
-/* 极简说明 */
+/* 简介 */
 .desc{
   padding:0 28px;
   font-size:13px;
@@ -49,25 +46,9 @@ body{
   margin-top:14px;
 }
 
-/* 卡片（更轻） */
-.card{
-  background:#ffffff;
-  margin:14px 22px;
-  padding:18px;
-  border-radius:18px;
-  box-shadow:0 6px 20px rgba(0,0,0,0.04);
-}
-
-/* 套餐价格 */
-.price{
-  font-size:13px;
-  color:#9aa0a6;
-  margin-top:4px;
-}
-
-/* 主按钮（极简黑） */
+/* 主按钮 */
 .primary-btn{
-  margin:22px;
+  margin:16px 22px 10px;
   padding:14px;
   border-radius:16px;
   background:#111;
@@ -76,9 +57,9 @@ body{
   font-weight:600;
 }
 
-/* 次按钮 */
+/* 次按钮（人工开通） */
 .secondary-btn{
-  margin:10px 22px;
+  margin:10px 22px 18px;
   padding:14px;
   border-radius:16px;
   background:#fff;
@@ -88,15 +69,23 @@ body{
   font-weight:500;
 }
 
-/* 复制按钮 */
-.copy-btn{
-  margin-top:10px;
-  font-size:12px;
-  color:#6b7280;
-  cursor:pointer;
+/* 卡片 */
+.card{
+  background:#ffffff;
+  margin:14px 22px;
+  padding:18px;
+  border-radius:18px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.04);
 }
 
-/* toast提示 */
+/* 价格 */
+.price{
+  font-size:13px;
+  color:#9aa0a6;
+  margin-top:4px;
+}
+
+/* toast */
 .toast{
   position:fixed;
   bottom:40px;
@@ -117,29 +106,28 @@ body{
 <!-- 顶部 -->
 <div class="header">
 
-<!-- 🐰 韩系极简兔子Logo（升级版） -->
+<!-- 🐰 更清晰兔头SVG -->
 <svg class="logo" viewBox="0 0 120 120">
-  <!-- 外圈 -->
-  <circle cx="60" cy="60" r="48" fill="#111"/>
+  <circle cx="60" cy="62" r="42" fill="#111"/>
 
-  <!-- 兔耳（更柔和韩系曲线） -->
-  <path d="M42 28 C38 10, 52 8, 54 30"
-        stroke="white" stroke-width="5"
+  <!-- 耳朵更大更直观 -->
+  <path d="M38 35 C28 0, 56 0, 56 40"
+        stroke="white" stroke-width="6"
         fill="none" stroke-linecap="round"/>
 
-  <path d="M78 28 C82 10, 68 8, 66 30"
-        stroke="white" stroke-width="5"
+  <path d="M82 35 C92 0, 64 0, 64 40"
+        stroke="white" stroke-width="6"
         fill="none" stroke-linecap="round"/>
 
-  <!-- 眼睛（极简点） -->
-  <circle cx="50" cy="56" r="4" fill="white"/>
-  <circle cx="70" cy="56" r="4" fill="white"/>
+  <!-- 眼睛 -->
+  <circle cx="48" cy="60" r="5" fill="white"/>
+  <circle cx="72" cy="60" r="5" fill="white"/>
 
   <!-- 鼻子 -->
-  <circle cx="60" cy="67" r="2.6" fill="white"/>
+  <circle cx="60" cy="72" r="3" fill="white"/>
 
-  <!-- 微笑（NewJeans风） -->
-  <path d="M52 74 Q60 80 68 74"
+  <!-- 嘴 -->
+  <path d="M50 80 Q60 88 70 80"
         stroke="white" stroke-width="3"
         fill="none" stroke-linecap="round"/>
 </svg>
@@ -149,16 +137,21 @@ body{
 
 </div>
 
-<!-- 韩系留白说明 -->
+<!-- 简介 -->
 <div class="desc">
 极简网络访问服务<br>
 轻量结构 · 多设备支持 · 即开即用
 </div>
 
-<!-- 主入口 -->
+<!-- 🔥 顶部两个入口（你这次的核心需求） -->
+
 <a href="你的微店链接" style="text-decoration:none;">
   <div class="primary-btn">立即自助开通</div>
 </a>
+
+<div class="secondary-btn" onclick="openContact()">
+人工开通 / 联系方式
+</div>
 
 <!-- 套餐 -->
 <div class="card">
@@ -181,12 +174,7 @@ body{
   <div class="price">¥160 · 不限流量</div>
 </div>
 
-<!-- 联系 -->
-<div class="secondary-btn" onclick="openContact()">
-人工开通 / 联系方式
-</div>
-
-<!-- 联系面板 -->
+<!-- 人工弹窗 -->
 <div id="contact" style="
 display:none;
 position:fixed;
@@ -202,16 +190,19 @@ box-shadow:0 -10px 30px rgba(0,0,0,0.12);
 
 <div style="font-size:16px;font-weight:600;">人工开通</div>
 
-<!-- 微信 -->
-<div style="margin-top:16px;">
-  <div style="font-size:13px;">微信：BunnyLink</div>
-  <div class="copy-btn" onclick="copyText('BunnyLink')">一键复制微信</div>
+<div style="font-size:13px;color:#9aa0a6;line-height:1.8;margin-top:10px;">
+微信：BunnyLink<br>
+QQ群：772320523
 </div>
 
-<!-- QQ群 -->
-<div style="margin-top:16px;">
-  <div style="font-size:13px;">QQ群：772320523</div>
-  <div class="copy-btn" onclick="copyText('772320523')">一键复制QQ群</div>
+<div style="margin-top:12px;font-size:12px;color:#666;cursor:pointer;"
+onclick="copyText('BunnyLink')">
+一键复制微信
+</div>
+
+<div style="margin-top:10px;font-size:12px;color:#666;cursor:pointer;"
+onclick="copyText('772320523')">
+一键复制QQ群
 </div>
 
 <div style="margin-top:20px;text-align:center;color:#111;font-size:14px;"
@@ -233,18 +224,12 @@ function closeContact(){
   document.getElementById('contact').style.display='none';
 }
 
-/* 一键复制 */
 function copyText(text){
   navigator.clipboard.writeText(text);
-  showToast("已复制 " + text);
-}
-
-/* toast */
-function showToast(msg){
   let t=document.getElementById('toast');
-  t.innerText=msg;
-  t.style.display='block';
-  setTimeout(()=>{t.style.display='none';},1500);
+  t.innerText="已复制 "+text;
+  t.style.display="block";
+  setTimeout(()=>t.style.display="none",1500);
 }
 </script>
 
