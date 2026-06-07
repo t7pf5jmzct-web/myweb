@@ -33,6 +33,15 @@ body{
   margin-top:6px;
 }
 
+/* 简介 */
+.desc{
+  padding:0 20px;
+  font-size:13px;
+  color:#8e8e93;
+  line-height:1.6;
+  text-align:center;
+}
+
 /* 卡片 */
 .card{
   background:#fff;
@@ -77,27 +86,7 @@ body{
   font-weight:500;
 }
 
-/* 底部导航 */
-.tabbar{
-  position:fixed;
-  bottom:0;
-  left:0;
-  right:0;
-  height:60px;
-  background:#fff;
-  border-top:1px solid #e5e5ea;
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-  font-size:11px;
-  color:#8e8e93;
-}
-
-.tab{
-  text-align:center;
-}
-
-/* 弹窗（iOS sheet） */
+/* 弹窗 */
 .modal{
   display:none;
   position:fixed;
@@ -109,10 +98,6 @@ body{
   border-top-right-radius:20px;
   padding:20px;
   box-shadow:0 -10px 30px rgba(0,0,0,0.15);
-}
-
-.modal h3{
-  margin:0;
 }
 
 .close{
@@ -134,12 +119,12 @@ body{
 </div>
 
 <!-- 简介 -->
-<div style="padding:0 20px;font-size:13px;color:#8e8e93;line-height:1.6;">
+<div class="desc">
   极简网络访问服务，即开即用，无复杂配置<br>
   支持 iOS / Android / Windows / Mac
 </div>
 
-<!-- 主按钮 -->
+<!-- 主入口 -->
 <a href="你的微店链接" target="_blank" style="text-decoration:none;">
   <div class="primary-btn">立即自助开通</div>
 </a>
@@ -165,20 +150,21 @@ body{
   <div class="price">¥160 · 不限流量</div>
 </div>
 
-<!-- 次按钮 -->
+<!-- 人工开通 -->
 <div class="secondary-btn" onclick="openContact()">
   人工开通 / 联系方式
 </div>
 
-<!-- 弹窗 -->
+<!-- 套餐弹窗 -->
 <div class="modal" id="sheet">
   <h3 id="planTitle">套餐</h3>
+
   <p style="color:#8e8e93;font-size:13px;">
-    点击立即开通前往微店完成支付
+    点击下方前往微店完成开通
   </p>
 
   <a href="你的微店链接" target="_blank" style="text-decoration:none;">
-    <div class="primary-btn">前往购买</div>
+    <div class="primary-btn">前往微店购买</div>
   </a>
 
   <div class="close" onclick="closeSheet()">关闭</div>
@@ -187,18 +173,14 @@ body{
 <!-- 联系弹窗 -->
 <div class="modal" id="contact">
   <h3>人工开通</h3>
+
   <p style="color:#8e8e93;font-size:13px;">
     微信：BunnyLink<br>
-    QQ：xxxxxxx
+    QQ：xxxxxxx<br>
+    （扫码或添加后人工开通）
   </p>
-  <div class="close" onclick="closeContact()">关闭</div>
-</div>
 
-<!-- tabbar -->
-<div class="tabbar">
-  <div class="tab">首页</div>
-  <div class="tab">套餐</div>
-  <div class="tab">我的</div>
+  <div class="close" onclick="closeContact()">关闭</div>
 </div>
 
 <script>
