@@ -18,18 +18,20 @@ body{
   padding:60px 20px 10px;
 }
 
-/* 🐰 更明显兔头 */
+/* 🐰 兔头Logo */
 .logo{
   width:92px;
   height:92px;
   margin:0 auto 10px;
 }
 
+/* 标题 */
 .title{
   font-size:26px;
   font-weight:600;
 }
 
+/* 副标题 */
 .sub{
   font-size:13px;
   color:#9aa0a6;
@@ -48,7 +50,7 @@ body{
 
 /* 主按钮 */
 .primary-btn{
-  margin:16px 22px 10px;
+  margin:18px 22px 10px;
   padding:14px;
   border-radius:16px;
   background:#111;
@@ -57,7 +59,7 @@ body{
   font-weight:600;
 }
 
-/* 次按钮（人工开通） */
+/* 次按钮 */
 .secondary-btn{
   margin:10px 22px 18px;
   padding:14px;
@@ -106,11 +108,10 @@ body{
 <!-- 顶部 -->
 <div class="header">
 
-<!-- 🐰 更清晰兔头SVG -->
+<!-- 🐰 兔子Logo（保持你韩系风） -->
 <svg class="logo" viewBox="0 0 120 120">
   <circle cx="60" cy="62" r="42" fill="#111"/>
 
-  <!-- 耳朵更大更直观 -->
   <path d="M38 35 C28 0, 56 0, 56 40"
         stroke="white" stroke-width="6"
         fill="none" stroke-linecap="round"/>
@@ -119,14 +120,11 @@ body{
         stroke="white" stroke-width="6"
         fill="none" stroke-linecap="round"/>
 
-  <!-- 眼睛 -->
   <circle cx="48" cy="60" r="5" fill="white"/>
   <circle cx="72" cy="60" r="5" fill="white"/>
 
-  <!-- 鼻子 -->
   <circle cx="60" cy="72" r="3" fill="white"/>
 
-  <!-- 嘴 -->
   <path d="M50 80 Q60 88 70 80"
         stroke="white" stroke-width="3"
         fill="none" stroke-linecap="round"/>
@@ -143,17 +141,17 @@ body{
 轻量结构 · 多设备支持 · 即开即用
 </div>
 
-<!-- 🔥 顶部两个入口（你这次的核心需求） -->
-
-<a href="你的微店链接" style="text-decoration:none;">
+<!-- 🔥 主入口（已接入你的微店） -->
+<a href="https://weidian.com/item.html?itemID=7781320001&wfr=c" target="_blank" style="text-decoration:none;">
   <div class="primary-btn">立即自助开通</div>
 </a>
 
+<!-- 人工开通 -->
 <div class="secondary-btn" onclick="openContact()">
 人工开通 / 联系方式
 </div>
 
-<!-- 套餐 -->
+<!-- 套餐展示 -->
 <div class="card">
   月卡
   <div class="price">¥20 · 300GB</div>
@@ -195,6 +193,7 @@ box-shadow:0 -10px 30px rgba(0,0,0,0.12);
 QQ群：772320523
 </div>
 
+<!-- 复制 -->
 <div style="margin-top:12px;font-size:12px;color:#666;cursor:pointer;"
 onclick="copyText('BunnyLink')">
 一键复制微信
@@ -205,7 +204,22 @@ onclick="copyText('772320523')">
 一键复制QQ群
 </div>
 
-<div style="margin-top:20px;text-align:center;color:#111;font-size:14px;"
+<!-- 同一个微店入口（备用转化） -->
+<a href="https://weidian.com/item.html?itemID=7781320001&wfr=c" target="_blank" style="text-decoration:none;">
+  <div style="
+    margin-top:16px;
+    padding:14px;
+    border-radius:16px;
+    background:#111;
+    color:white;
+    text-align:center;
+    font-weight:600;
+  ">
+    立即前往微店下单
+  </div>
+</a>
+
+<div style="margin-top:18px;text-align:center;color:#111;font-size:14px;"
 onclick="closeContact()">
 关闭
 </div>
