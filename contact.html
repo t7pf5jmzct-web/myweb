@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BunnyLink - Contact</title>
+<title>BunnyLink Contact</title>
 
 <style>
 body{
@@ -12,7 +12,6 @@ body{
   color:#2b2b2b;
 }
 
-/* 容器 */
 .container{
   max-width:700px;
   margin:auto;
@@ -20,36 +19,23 @@ body{
   text-align:center;
 }
 
-/* logo */
 .logo{
-  font-size:44px;
-  margin-bottom:10px;
+  font-size:48px;
 }
 
-/* 标题 */
 .title{
   font-size:26px;
   font-weight:600;
-  color:#333;
+  margin-top:10px;
 }
 
 .sub{
-  margin-top:8px;
   font-size:13px;
   color:#777;
 }
 
-/* 说明 */
-.desc{
-  margin-top:20px;
-  font-size:13px;
-  color:#666;
-  line-height:1.8;
-}
-
-/* 卡片 */
 .card{
-  margin-top:30px;
+  margin-top:25px;
   background:#ffffffcc;
   border:1px solid #e9e9ee;
   border-radius:16px;
@@ -57,7 +43,6 @@ body{
   box-shadow:0 6px 18px rgba(0,0,0,0.04);
 }
 
-/* 按钮 */
 .btn{
   display:block;
   margin:10px auto;
@@ -67,46 +52,19 @@ body{
   font-size:13px;
   font-weight:600;
   max-width:260px;
-  transition:0.2s;
 }
 
-/* 主按钮 */
 .primary{
   background:#cfe7d0;
   color:#2b2b2b;
 }
 
-/* 次按钮 */
 .secondary{
   border:1px solid #d6d6dd;
   color:#555;
   background:#fff;
 }
 
-.primary:hover{
-  background:#c6e2c8;
-  transform:scale(1.02);
-}
-
-.secondary:hover{
-  background:#f5f5f7;
-}
-
-/* 二维码占位 */
-.qr{
-  width:160px;
-  height:160px;
-  margin:15px auto;
-  border-radius:12px;
-  background:#f2f2f2;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#aaa;
-  font-size:12px;
-}
-
-/* 底部 */
 .footer{
   margin-top:50px;
   font-size:11px;
@@ -119,59 +77,32 @@ body{
 
 <div class="container">
 
-  <!-- LOGO -->
   <div class="logo">🐰</div>
 
   <div class="title">人工开通</div>
 
-  <div class="sub">Contact / Support</div>
+  <div class="sub">Contact Support</div>
 
-  <!-- 说明 -->
-  <div class="desc">
-    如需人工开通服务，请通过以下方式联系。<br>
-    我们将为你进行账号开通与使用指导。
-  </div>
-
-  <!-- 微信 -->
   <div class="card">
 
-    <div style="font-size:14px;font-weight:600;">微信联系</div>
-
-    <div class="qr">微信二维码</div>
-
-    <div style="font-size:12px;color:#777;">
-      BunnyLink（你的微信号）
+    <div style="font-size:13px;color:#666;">
+      如需人工开通服务，请通过以下方式联系<br>
+      我们将为你进行账号开通与使用支持
     </div>
 
-    <a class="btn primary" href="#">
-      打开微信 / 添加好友
+    <a class="btn primary" href="你的微信二维码或链接">
+      微信联系
+    </a>
+
+    <a class="btn secondary" href="你的QQ链接">
+      QQ联系
     </a>
 
   </div>
 
-  <!-- QQ -->
-  <div class="card">
-
-    <div style="font-size:14px;font-weight:600;">QQ联系</div>
-
-    <div class="qr">QQ二维码</div>
-
-    <div style="font-size:12px;color:#777;">
-      QQ客服
-    </div>
-
-    <a class="btn secondary" href="#">
-      打开QQ / 联系客服
-    </a>
-
-  </div>
-
-  <!-- 返回 -->
-  <div style="margin-top:30px;">
-    <a class="btn secondary" href="index.html">
-      返回主页
-    </a>
-  </div>
+  <a class="btn secondary" href="index.html">
+    返回首页
+  </a>
 
   <div class="footer">
     BunnyLink © 2026
