@@ -15,11 +15,11 @@ body{
 /* 顶部 */
 .header{
   text-align:center;
-  padding:50px 20px 20px;
+  padding:50px 20px 10px;
 }
 
 .logo{
-  font-size:44px;
+  font-size:46px;
 }
 
 .title{
@@ -40,27 +40,7 @@ body{
   color:#8e8e93;
   line-height:1.6;
   text-align:center;
-}
-
-/* 卡片 */
-.card{
-  background:#fff;
-  margin:12px 20px;
-  padding:16px;
-  border-radius:16px;
-  box-shadow:0 4px 18px rgba(0,0,0,0.06);
-  cursor:pointer;
-  transition:0.2s;
-}
-
-.card:active{
-  transform:scale(0.98);
-}
-
-.price{
-  font-size:13px;
-  color:#8e8e93;
-  margin-top:4px;
+  margin-top:10px;
 }
 
 /* 主按钮 */
@@ -68,7 +48,7 @@ body{
   margin:20px;
   padding:14px;
   border-radius:14px;
-  background:#007aff;
+  background:#1c1c1e;
   color:white;
   text-align:center;
   font-weight:600;
@@ -82,8 +62,39 @@ body{
   background:#fff;
   border:1px solid #e5e5ea;
   text-align:center;
-  color:#007aff;
+  color:#1c1c1e;
   font-weight:500;
+}
+
+/* 卡片 */
+.card{
+  background:#fff;
+  margin:12px 20px;
+  padding:16px;
+  border-radius:16px;
+  box-shadow:0 4px 18px rgba(0,0,0,0.06);
+}
+
+/* 套餐 */
+.price{
+  font-size:13px;
+  color:#8e8e93;
+  margin-top:4px;
+}
+
+/* 二维码框 */
+.qr{
+  width:150px;
+  height:150px;
+  margin:10px auto;
+  border-radius:14px;
+  background:#f2f2f2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  color:#aaa;
+  border:1px solid #e5e5ea;
 }
 
 /* 弹窗 */
@@ -124,28 +135,28 @@ body{
   支持 iOS / Android / Windows / Mac
 </div>
 
-<!-- 主入口 -->
+<!-- 主开通 -->
 <a href="你的微店链接" target="_blank" style="text-decoration:none;">
   <div class="primary-btn">立即自助开通</div>
 </a>
 
 <!-- 套餐 -->
-<div class="card" onclick="openSheet('月卡 ¥20')">
+<div class="card">
   月卡
   <div class="price">¥20 · 300GB</div>
 </div>
 
-<div class="card" onclick="openSheet('季卡 ¥40')">
+<div class="card">
   季卡
   <div class="price">¥40 · 300GB/月</div>
 </div>
 
-<div class="card" onclick="openSheet('半年 ¥80')">
+<div class="card">
   半年
   <div class="price">¥80 · 不限流量</div>
 </div>
 
-<div class="card" onclick="openSheet('年卡 ¥160')">
+<div class="card">
   年卡
   <div class="price">¥160 · 不限流量</div>
 </div>
@@ -155,44 +166,27 @@ body{
   人工开通 / 联系方式
 </div>
 
-<!-- 套餐弹窗 -->
-<div class="modal" id="sheet">
-  <h3 id="planTitle">套餐</h3>
-
-  <p style="color:#8e8e93;font-size:13px;">
-    点击下方前往微店完成开通
-  </p>
-
-  <a href="你的微店链接" target="_blank" style="text-decoration:none;">
-    <div class="primary-btn">前往微店购买</div>
-  </a>
-
-  <div class="close" onclick="closeSheet()">关闭</div>
-</div>
-
-<!-- 联系弹窗 -->
+<!-- 人工开通弹窗 -->
 <div class="modal" id="contact">
-  <h3>人工开通</h3>
 
-  <p style="color:#8e8e93;font-size:13px;">
+  <h3 style="margin-top:0;">人工开通</h3>
+
+  <div style="font-size:13px;color:#8e8e93;line-height:1.8;">
     微信：BunnyLink<br>
-    QQ：xxxxxxx<br>
-    （扫码或添加后人工开通）
-  </p>
+    QQ群：772320523
+  </div>
+
+  <!-- 微信二维码 -->
+  <div class="qr">微信二维码</div>
+
+  <!-- QQ二维码 -->
+  <div class="qr">QQ群二维码</div>
 
   <div class="close" onclick="closeContact()">关闭</div>
+
 </div>
 
 <script>
-function openSheet(plan){
-  document.getElementById('sheet').style.display='block';
-  document.getElementById('planTitle').innerText=plan;
-}
-
-function closeSheet(){
-  document.getElementById('sheet').style.display='none';
-}
-
 function openContact(){
   document.getElementById('contact').style.display='block';
 }
