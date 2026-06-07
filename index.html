@@ -14,7 +14,7 @@ body{
 
 /* 容器 */
 .container{
-  max-width:860px;
+  max-width:900px;
   margin:auto;
   padding:70px 20px;
   text-align:center;
@@ -22,30 +22,28 @@ body{
 
 /* logo */
 .logo{
-  font-size:44px;
-  margin-bottom:10px;
+  font-size:48px;
+  margin-bottom:8px;
 }
 
 /* 标题 */
 .title{
   font-size:28px;
   font-weight:600;
-  letter-spacing:1px;
-  color:#333;
 }
 
 .sub{
-  margin-top:8px;
   font-size:13px;
   color:#777;
+  margin-top:6px;
 }
 
 /* 简介 */
 .desc{
-  margin-top:22px;
+  margin-top:18px;
   font-size:13px;
   color:#666;
-  line-height:1.9;
+  line-height:1.8;
 }
 
 /* 套餐 */
@@ -64,6 +62,12 @@ body{
   border-radius:16px;
   padding:14px;
   box-shadow:0 6px 18px rgba(0,0,0,0.04);
+  transition:0.2s;
+  cursor:pointer;
+}
+
+.card:hover{
+  transform:scale(1.03);
 }
 
 .price{
@@ -85,7 +89,7 @@ body{
   transition:0.2s;
 }
 
-/* 主按钮（奶油绿） */
+/* 主按钮 */
 .primary{
   background:#cfe7d0;
   color:#2b2b2b;
@@ -98,17 +102,16 @@ body{
   background:#fff;
 }
 
-/* hover */
 .primary:hover{
-  transform:scale(1.02);
   background:#c6e2c8;
+  transform:scale(1.02);
 }
 
 .secondary:hover{
   background:#f5f5f7;
 }
 
-/* 底部 */
+/* footer */
 .footer{
   margin-top:50px;
   font-size:11px;
@@ -128,10 +131,10 @@ body{
 
   <div class="sub">轻量 · 简洁 · 多设备支持</div>
 
-  <!-- 中文简介（你要的重点） -->
+  <!-- 中文简介 -->
   <div class="desc">
-    BunnyLink 提供轻量级网络访问服务，支持多设备使用，界面简洁易用。<br>
-    即开即用，无复杂配置，适合日常稳定连接需求。
+    BunnyLink 提供稳定、轻量的网络访问体验。<br>
+    即开即用，无复杂配置，支持多设备同步使用。
   </div>
 
   <!-- 套餐 -->
@@ -159,7 +162,7 @@ body{
 
   </div>
 
-  <!-- 按钮 -->
+  <!-- 主入口 -->
   <div style="margin-top:35px;">
 
     <a class="btn primary" href="你的微店链接" target="_blank">
@@ -167,13 +170,13 @@ body{
     </a>
 
     <a class="btn secondary" href="contact.html">
-      联系人工开通
+      人工开通 / 联系支持
     </a>
 
   </div>
 
   <div class="footer">
-    BunnyLink © 2026
+    BunnyLink © 2026 · Minimal Access System
   </div>
 
 </div>
