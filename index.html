@@ -2,203 +2,116 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BunnyLink</title>
+<title>BunnyLink - 选择入口</title>
 
 <style>
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
-  background:#0a0c12;
+  background:linear-gradient(135deg,#0b0f1a,#111a2e,#0f1f3a);
   color:white;
 }
 
-.nav{
-  display:flex;
-  justify-content:space-between;
-  padding:16px 20px;
-  font-size:12px;
-  color:#8b95a7;
-}
-
-.hero{
+.container{
+  max-width:800px;
+  margin:auto;
+  padding:60px 20px;
   text-align:center;
-  padding:60px 20px 30px;
 }
 
-.logo{
-  font-size:34px;
+.title{
+  font-size:26px;
   font-weight:600;
 }
 
 .sub{
-  color:#8b95a7;
-  margin-top:10px;
+  color:#9aa4b2;
   font-size:13px;
+  margin-top:10px;
 }
 
-.rabbit{
-  font-size:48px;
-  margin:10px 0;
+.cards{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-top:40px;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:20px;
+  border-radius:14px;
+  backdrop-filter: blur(10px);
+}
+
+.card h3{
+  margin:0;
+  font-size:16px;
+}
+
+.card p{
+  font-size:12px;
+  color:#9aa4b2;
+  margin-top:6px;
 }
 
 .btn{
   display:inline-block;
-  margin-top:22px;
-  padding:13px 26px;
-  background:#7aa2ff;
-  color:#000;
+  margin-top:12px;
+  padding:12px 18px;
+  border-radius:10px;
   text-decoration:none;
-  border-radius:12px;
+  font-size:13px;
   font-weight:600;
 }
 
-.section{
-  max-width:900px;
-  margin:auto;
-  padding:30px 20px;
+.primary{
+  background:#6ea8ff;
+  color:#000;
 }
 
-.h2{
-  font-size:15px;
-  color:#cfd6e4;
-  margin-bottom:12px;
-}
-
-/* 套餐 */
-.cards{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-}
-
-.card{
-  background:#141826;
-  border:1px solid #1f2333;
-  padding:15px;
-  width:180px;
-  border-radius:14px;
-}
-
-.price{
-  color:#7aa2ff;
-  font-size:18px;
-  margin-top:6px;
-}
-
-.small{
-  font-size:12px;
-  color:#888;
-  margin-top:6px;
-}
-
-/* 功能 */
-.features{
-  font-size:13px;
-  color:#9aa4b2;
-  line-height:1.7;
-}
-
-/* FAQ */
-.faq{
-  background:#111522;
-  padding:12px;
-  border-radius:10px;
-  margin-top:10px;
-  font-size:13px;
-  color:#9aa4b2;
-}
-
-.footer{
-  text-align:center;
-  padding:35px 20px;
-  font-size:11px;
-  color:#555;
+.secondary{
+  border:1px solid #6ea8ff;
+  color:#6ea8ff;
 }
 </style>
 </head>
 
 <body>
 
-<div class="nav">
-  <div>BunnyLink</div>
-  <div>Stable · Secure · Simple</div>
-</div>
+<div class="container">
 
-<div class="hero">
-
-  <div class="rabbit">🐰</div>
-
-  <div class="logo">BunnyLink</div>
-
-  <div class="sub">极简设计 · 稳定连接 · 多设备支持</div>
-
-  <a class="btn" href="contact.html">立即开通 / Get Started</a>
-
-</div>
-
-<!-- 功能 -->
-<div class="section">
-  <div class="h2">服务特点 Features</div>
-
-  <div class="features">
-    ✔ 支持 iOS / Android / Windows / Mac<br>
-    ✔ 稳定连接体验（低延迟优化）<br>
-    ✔ 简洁轻量，快速使用
-  </div>
-</div>
-
-<!-- 套餐 -->
-<div class="section">
-  <div class="h2">套餐 Plans</div>
+  <div class="title">选择入口</div>
+  <div class="sub">Select your access method</div>
 
   <div class="cards">
 
+    <!-- 微店 -->
     <div class="card">
-      <div>月卡 Monthly</div>
-      <div class="price">¥20</div>
-      <div class="small">300GB / 月</div>
+      <h3>在线购买</h3>
+      <p>推荐方式｜自助下单，立即开通服务</p>
+      <a class="btn primary" href="你的微店链接" target="_blank">
+        进入微店购买
+      </a>
     </div>
 
+    <!-- 联系方式 -->
     <div class="card">
-      <div>季卡 Quarterly</div>
-      <div class="price">¥40</div>
-      <div class="small">300GB / 月</div>
-    </div>
+      <h3>人工开通</h3>
+      <p>微信 / QQ 联系客服，人工处理订单</p>
 
-    <div class="card">
-      <div>半年 Half-year</div>
-      <div class="price">¥80</div>
-      <div class="small">不限流量</div>
-    </div>
+      <a class="btn secondary" href="你的微信二维码页面或图片链接">
+        微信联系
+      </a>
 
-    <div class="card">
-      <div>年卡 Yearly</div>
-      <div class="price">¥160</div>
-      <div class="small">不限流量</div>
+      <a class="btn secondary" href="你的QQ链接">
+        QQ联系
+      </a>
     </div>
 
   </div>
-</div>
 
-<!-- FAQ -->
-<div class="section">
-  <div class="h2">常见问题 FAQ</div>
-
-  <div class="faq">
-    Q：支持多设备吗？<br>
-    A：支持多设备登录，取决于套餐。
-  </div>
-
-  <div class="faq">
-    Q：流量限制？<br>
-    A：月卡/季卡 300GB，半年/年卡不限流量。
-  </div>
-
-</div>
-
-<div class="footer">
-  BunnyLink © Minimal Global Service
 </div>
 
 </body>
