@@ -7,91 +7,49 @@
 <style>
 body{
   margin:0;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
-  background:#0b0c10;
-  color:#fff;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;
+  background:#0a0c12;
+  color:white;
 }
 
-/* 整体居中 */
-.wrap{
-  max-width:920px;
-  margin:auto;
-  padding:70px 20px;
-  text-align:center;
-}
-
-/* logo */
-.logo{
-  font-size:34px;
-  letter-spacing:1px;
-  font-weight:600;
-  margin-top:10px;
-}
-
-/* 兔子（极简风） */
-.rabbit{
-  width:70px;
-  height:70px;
-  margin:0 auto 10px auto;
-  border-radius:18px;
-  background:#151827;
+/* 顶部导航 */
+.nav{
   display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:32px;
-}
-
-/* 副标题 */
-.sub{
-  color:#a7b0c0;
+  justify-content:space-between;
+  padding:18px 25px;
   font-size:14px;
+  color:#9aa4b2;
+}
+
+/* hero区域 */
+.hero{
+  text-align:center;
+  padding:70px 20px 30px;
+}
+
+.logo{
+  font-size:36px;
+  font-weight:600;
+  letter-spacing:1px;
+}
+
+.sub{
+  color:#8f9bb3;
   margin-top:10px;
+  font-size:14px;
 }
 
-/* 小标签 */
-.tag{
-  margin-top:18px;
-  font-size:13px;
-  color:#7f8aa3;
-  line-height:1.6;
-}
-
-/* 卡片 */
-.cards{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:14px;
-  margin-top:45px;
-}
-
-.card{
-  background:#141826;
-  border:1px solid #1f2333;
-  padding:18px;
-  width:190px;
-  border-radius:14px;
-  text-align:left;
-}
-
-/* hover轻微上浮 */
-.card:hover{
-  transform:translateY(-4px);
-  transition:0.2s;
-}
-
-/* 价格 */
-.price{
-  font-size:20px;
-  color:#7aa2ff;
-  margin-top:8px;
+/* 兔子 */
+.rabbit{
+  font-size:52px;
+  margin:15px 0;
 }
 
 /* 按钮 */
 .btn{
   display:inline-block;
-  margin-top:45px;
-  padding:14px 28px;
+  margin-top:25px;
+  padding:14px 26px;
   background:#7aa2ff;
   color:#000;
   text-decoration:none;
@@ -99,67 +57,144 @@ body{
   font-weight:600;
 }
 
-/* 底部说明 */
+/* 分区 */
+.section{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+/* 标题 */
+.h2{
+  font-size:18px;
+  margin-bottom:15px;
+  color:#cfd6e4;
+}
+
+/* 卡片 */
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+}
+
+.card{
+  background:#141826;
+  border:1px solid #1f2333;
+  padding:16px;
+  border-radius:14px;
+  width:200px;
+}
+
+.price{
+  color:#7aa2ff;
+  font-size:20px;
+  margin-top:8px;
+}
+
+/* feature区 */
+.features{
+  display:grid;
+  gap:10px;
+  color:#8b95a7;
+  font-size:13px;
+  text-align:center;
+}
+
+/* FAQ */
+.faq{
+  background:#111522;
+  padding:14px;
+  border-radius:12px;
+  margin-top:10px;
+  font-size:13px;
+  color:#9aa4b2;
+}
+
+/* footer */
 .footer{
-  margin-top:30px;
+  text-align:center;
+  padding:40px 20px;
   font-size:12px;
-  color:#666;
+  color:#555;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="wrap">
+<div class="nav">
+  <div>BunnyLink</div>
+  <div>Stable • Secure • Simple</div>
+</div>
 
-  <!-- 兔子logo -->
+<div class="hero">
+
   <div class="rabbit">🐰</div>
 
   <div class="logo">BunnyLink</div>
 
-  <div class="sub">Minimal · Stable · Multi-device</div>
-
-  <div class="tag">
-    iOS / Android / Windows / Mac<br>
-    轻量连接 · 稳定体验 · 简洁设计
-  </div>
-
-  <!-- 套餐 -->
-  <div class="cards">
-
-    <div class="card">
-      <div>月卡</div>
-      <div class="price">¥20</div>
-      <div style="color:#888;font-size:12px;margin-top:6px;">300GB / month</div>
-    </div>
-
-    <div class="card">
-      <div>季卡</div>
-      <div class="price">¥40</div>
-      <div style="color:#888;font-size:12px;margin-top:6px;">300GB / month</div>
-    </div>
-
-    <div class="card">
-      <div>半年卡</div>
-      <div class="price">¥80</div>
-      <div style="color:#888;font-size:12px;margin-top:6px;">Unlimited</div>
-    </div>
-
-    <div class="card">
-      <div>年卡</div>
-      <div class="price">¥160</div>
-      <div style="color:#888;font-size:12px;margin-top:6px;">Unlimited</div>
-    </div>
-
-  </div>
+  <div class="sub">Minimal design · Global access · Multi-device support</div>
 
   <a class="btn" href="contact.html">Get Started</a>
 
-  <div class="footer">
-    secure access · optimized for mobile
-  </div>
+</div>
 
+<!-- features -->
+<div class="section">
+  <div class="h2">Features</div>
+
+  <div class="features">
+    <div>✓ Supports iOS / Android / Windows / Mac</div>
+    <div>✓ Stable connection experience</div>
+    <div>✓ Lightweight & fast deployment</div>
+  </div>
+</div>
+
+<!-- pricing -->
+<div class="section">
+  <div class="h2">Plans</div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div>Monthly</div>
+      <div class="price">¥20</div>
+      <div style="font-size:12px;color:#888;">300GB / month</div>
+    </div>
+
+    <div class="card">
+      <div>Quarterly</div>
+      <div class="price">¥40</div>
+      <div style="font-size:12px;color:#888;">300GB / month</div>
+    </div>
+
+    <div class="card">
+      <div>Half-year</div>
+      <div class="price">¥80</div>
+      <div style="font-size:12px;color:#888;">Unlimited</div>
+    </div>
+
+    <div class="card">
+      <div>Yearly</div>
+      <div class="price">¥160</div>
+      <div style="font-size:12px;color:#888;">Unlimited</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section">
+  <div class="h2">FAQ</div>
+
+  <div class="faq">Q: Does it support multiple devices?<br>A: Yes, up to multiple devices depending on plan.</div>
+  <div class="faq">Q: Is traffic limited?<br>A: Monthly plans include 300GB, higher plans are unlimited.</div>
+</div>
+
+<div class="footer">
+  © BunnyLink · Minimal global access service
 </div>
 
 </body>
